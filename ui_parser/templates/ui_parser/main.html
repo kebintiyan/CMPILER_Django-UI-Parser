@@ -1,0 +1,9 @@
+{% extends "ui_parser/base.html" %}
+{% block content %}
+    <h1>UI Parser</h1>
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Parse</button>
+    </form>
+{% endblock content %} 
